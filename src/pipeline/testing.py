@@ -83,7 +83,7 @@ def test_models(data_dict, epochs: int, models: dict, window_sizes: list):
 
     # Exporting performance of different models and best parameters dict in .json format
     
-    with open("artifacts/Performance_Params.json", "w") as f:
+    with open("artifacts/Testing_Logs.json", "w") as f:
         json.dump(parameter_dict, f)
         f.close()
     with open("artifacts/Best_Model_Params.json", "w") as f:
@@ -91,5 +91,5 @@ def test_models(data_dict, epochs: int, models: dict, window_sizes: list):
         f.close()
 
     print(color(
-        '\nSuccessfully Evaluated different models and saved all logs and best model performance metrics in \'Model Performance\' directory.',
+        '\nSuccessfully evaluated all data and saved testing logs in \"artifacts/Testing_Logs.json\" and metrics of best performing model at \"artifacts/Best_Model_Params.json\".',
         'magenta'))
